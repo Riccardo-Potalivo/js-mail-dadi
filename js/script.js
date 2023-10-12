@@ -8,27 +8,37 @@ const mailList =
     'Simone@gmail.com'
 ];
 
+const button = document.querySelector('button')
 
-// valore input email
-let mailValue = document.getElementById('mail').value;
-let search = false;
 
-console.log(mailValue);
 
-for(let i = 0; i < mailList.length; i++)
+button.addEventListener('click',
+function()
 {
-    let currentMail = mailList[i];
-    if(currentMail.toLocaleLowerCase() === mailValue.toLocaleLowerCase())
+    // valore input email
+    let mailValue = document.getElementById('mail').value;
+    console.log(mailValue);
+    let search = false;
+    
+    // range di ricerca
+    for(let i = 0; i < mailList.length; i++)
     {
-        search = true;
+        let currentMail = mailList[i];
+        // verifica corrispondenza
+        if(currentMail.toLocaleLowerCase() === mailValue.toLocaleLowerCase())
+        {
+            search = true;
+        }
+    };
+    
+    // responso verifica
+    if(search)
+    {
+        console.log('trovato')
     }
-};
+    else
+    {
+        console.log('non trovato')
+    }
+});
 
-if(search)
-{
-    console.log('trovato')
-}
-else
-{
-    console.log('non trovato')
-}
