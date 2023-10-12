@@ -19,3 +19,10 @@ else
 {
     console.log('draw')
 }
+
+
+
+
+
+document.querySelector(`.computer .face-${randomNumberComputer}`).classList.remove('d-none')
+document.querySelector(`.player .face-${randomNumberPlayer}`).classList.remove('d-none')
