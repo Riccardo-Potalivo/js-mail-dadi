@@ -1,28 +1,43 @@
+const button = document.querySelector('button');
 
-let randomNumberPlayer = Math.floor(Math.random() * 6) + 1;
-let randomNumberComputer = Math.floor(Math.random() * 6) + 1;
+const diceEl = document.querySelectorAll('.dice');
 
-console.log('Player ' + randomNumberPlayer);
-console.log('Computer ' + randomNumberComputer);
-
-if(randomNumberComputer > randomNumberPlayer)
+button.addEventListener('click',
+function()
 {
-    console.log('Computer wins')
-}
+    
+    diceEl.forEach((e) =>
+        {
+            e.classList.add('d-none')
+        });
 
-else if(randomNumberComputer < randomNumberPlayer)
-{
-    console.log('Player wins')
-}
+    let randomNumberPlayer = Math.floor(Math.random() * 6) + 1;
+    let randomNumberComputer = Math.floor(Math.random() * 6) + 1;
+        
+    if(randomNumberComputer > randomNumberPlayer)
+    {
+        console.log('Computer wins')
+    }
+    
+    else if(randomNumberComputer < randomNumberPlayer)
+    {
+        console.log('Player wins')
+    }
+    
+    else 
+    {
+        console.log('draw')
+    }
 
-else 
-{
-    console.log('draw')
-}
+    console.log('Player ' + randomNumberPlayer);
+    console.log('Computer ' + randomNumberComputer);
+    
+    let faceClassComputer = document.querySelector(`.computer .face-${randomNumberComputer}`).classList
+    let faceClassPlayer = document.querySelector(`.player .face-${randomNumberPlayer}`).classList
+
+    faceClassComputer.remove('d-none')
+    
+    faceClassPlayer.remove('d-none')
+});
 
 
-
-
-
-document.querySelector(`.computer .face-${randomNumberComputer}`).classList.remove('d-none')
-document.querySelector(`.player .face-${randomNumberPlayer}`).classList.remove('d-none')
