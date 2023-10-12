@@ -8,7 +8,8 @@ const mailList =
     'Simone@gmail.com'
 ];
 
-const button = document.querySelector('button')
+const button = document.querySelector('button');
+const outcome = document.querySelector('h2')
 
 
 
@@ -32,13 +33,21 @@ function()
     };
     
     // responso verifica
+    let OutcomeText;
+
     if(search)
     {
-        console.log('trovato')
+        console.log('trovato');
+        OutcomeText = 'Accesso Consentito'
     }
     else
     {
         console.log('non trovato')
+        OutcomeText = 'Accesso Negato'
+
     }
+
+    outcome.innerText = OutcomeText
+
 });
 
