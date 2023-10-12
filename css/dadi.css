@@ -35,6 +35,11 @@ main>div
     max-width: 800px;
 }
 
+.title
+{
+    width: 200px;
+}
+
 .face-1 
 {
   display: flex;
@@ -58,7 +63,7 @@ main>div
   width: 104px;
   height: 104px;
   border-radius: 20px;
-  margin-right : 10px;
+  margin : auto;
 }
 
 .dot

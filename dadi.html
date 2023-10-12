@@ -26,27 +26,29 @@
   <main class="container">
     <div class="m-auto pt-5 row justify-content-around">
 
-      <div class="player col-auto">
+      <div class="player col-auto  text-center">
+
+        <div class="title rounded-3 text-white fw-bold fs-3 mb-5">Player</div>
       
         <div class="dice face-1">
           <span class="dot">
           </span>
         </div>
       
-        <div class="dice face-2">
+        <div class="dice face-2 d-none">
           <span class="dot">
           </span>
           <span class="dot">
           </span>
         </div>
       
-        <div class="dice face-3">
+        <div class="dice face-3 d-none">
           <span class="dot"></span>
           <span class="dot"></span>
           <span class="dot"></span>
         </div>
       
-        <div class="face-4 dice">
+        <div class="face-4 dice d-none">
           <div class="column">
             <span class="dot"></span>
             <span class="dot"></span>
@@ -56,7 +58,8 @@
             <span class="dot"></span>
           </div>
         </div>
-        <div class="face-5 dice">
+
+        <div class="face-5 dice d-none">
       
           <div class="column">
             <span class="dot"></span>
@@ -73,7 +76,8 @@
           </div>
       
         </div>
-        <div class="face-6 dice">
+
+        <div class="face-6 dice d-none">
           <div class="column">
             <span class="dot"></span>
             <span class="dot"></span>
@@ -86,30 +90,34 @@
           </div>
       
         </div>
+
+        <div class="outcome d-inline-block rounded-3 text-white fw-bold fs-5 p-2 mt-4"></div>
       
       </div>
 
-      <div class="computer col-auto">
+      <div class="computer col-auto text-center">
+
+        <div class="title rounded-3 text-white fw-bold fs-3 mb-5">Computer</div>
 
         <div class="dice face-1">
           <span class="dot">
           </span>
         </div>
       
-        <div class="dice face-2">
+        <div class="dice face-2 d-none">
           <span class="dot">
           </span>
           <span class="dot">
           </span>
         </div>
       
-        <div class="dice face-3">
+        <div class="dice face-3 d-none">
           <span class="dot"></span>
           <span class="dot"></span>
           <span class="dot"></span>
         </div>
       
-        <div class="face-4 dice">
+        <div class="face-4 dice d-none">
           <div class="column">
             <span class="dot"></span>
             <span class="dot"></span>
@@ -119,7 +127,8 @@
             <span class="dot"></span>
           </div>
         </div>
-        <div class="face-5 dice">
+
+        <div class="face-5 dice d-none">
       
           <div class="column">
             <span class="dot"></span>
@@ -136,7 +145,8 @@
           </div>
       
         </div>
-        <div class="face-6 dice">
+
+        <div class="face-6 dice d-none">
           <div class="column">
             <span class="dot"></span>
             <span class="dot"></span>
@@ -149,11 +159,14 @@
           </div>
       
         </div>
-      
+
+        <div class="outcome d-inline-block rounded-3 text-white fw-bold fs-5 p-2 mt-4"></div>
+
+
       </div>
 
       <div class="col-12 text-center mt-5">
-        <button type="button" class="btn btn-primary">Roll</button>
+        <button type="button" class="btn btn-success fw-bold">Roll</button>
       </div>
 
     </div>
