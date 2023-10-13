@@ -9,13 +9,15 @@ const mailList =
 ];
 
 const button = document.querySelector('button');
-const outcome = document.querySelector('h2')
+const outcome = document.querySelector('.alert')
 
 
 
 button.addEventListener('click',
 function()
 {
+    outcome.className = 'alert d-none';
+
     // valore input email
     let mailValue = document.getElementById('mail').value;
     console.log(mailValue);
@@ -33,21 +35,24 @@ function()
     };
     
     // responso verifica
-    let OutcomeText;
+    let outcomeText, outcomeClass;
 
     if(search)
     {
         console.log('trovato');
-        OutcomeText = 'Accesso Consentito'
+        outcomeText = 'Accesso Consentito';
+        outcomeClass = 'alert-success';
     }
     else
     {
-        console.log('non trovato')
-        OutcomeText = 'Accesso Negato'
-
+        console.log('non trovato');
+        outcomeText = 'Accesso Negato';
+        outcomeClass = 'alert-danger';
     }
 
-    outcome.innerText = OutcomeText
+    outcome.innerText = outcomeText;
+    outcome.classList.add(outcomeClass);
+    outcome.classList.remove('d-none');
 
 });
 

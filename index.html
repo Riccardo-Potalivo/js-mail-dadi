@@ -23,13 +23,18 @@
         </div>
     </nav>
 
-    <div>
-        <input type="email" value="" id="mail">
-        <button>Verifica</button>
-        <h2></h2>
-    </div>
+    <main class="container pt-5">
+      <div class="card m-auto text-center" style="width: 30rem;">
+        <div class="card-body">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control mb-3" id="mail" aria-describedby="emailHelp">
 
-
+          <div class="alert d-none mb-4">Studente non presente</div>
+          <button type="button" class="btn btn-primary">Verifica</button>
+        </div>
+      </div>
+    </main>
+   
 
   <!-- javascript -->
   <script src="js/script.js"></script>
